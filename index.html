@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/fieldset.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form class="js-recalculate">
+        <div class="container">
+            <fieldset class="fieldset">
+                <legend class="fieldset__legend">Kalkulator walutowy</legend>
+                <p>
+                    <label>
+                        <span class="fieldset__label">
+                            Co chcesz przeliczyć:
+                        </span>
+                        <select name="WhatWeChange" class="js-choice fieldset__labeldata">
+                            <option value="PLN/EUR">PLN/EUR</option>
+                            <option value="PLN/USD">PLN/USD</option>
+                            <option value="PLN/GBP">PLN/GBP</option>
+                            <option value="PLN/CHF">PLN/CHF</option>
+                            <option value="EUR/PLN">EUR/PLN</option>
+                            <option value="USD/PLN">USD/PLN</option>
+                            <option value="GBP/PLN">GBP/PLN</option>
+                            <option value="CHF/PLN">CHF/PLN</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="fieldset__label">
+                            *Kwota do przeliczenia :
+                        </span>
+                        <input type="number" step="0.01" name="quantity" required min="1"
+                            class="js-howMuch fieldset__labeldata">
+                    </label>
+                </p>
+                <p>
+                    <strong class="js-result"></strong>
+                </p>
+                <p>
+                    <button class="js-count fieldset__button">Przelicz!</button>
+                </p>
+                <p>
+                    <button type="reset" class="js-reset fieldset__button">Wyczysc!</button>
+                </p>
+                <p class="container--footnotes">* - pole wymagane. <br>Średnie kursy walut NBP na dzień 8.12.2022.</p>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

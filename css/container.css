@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 5px -5px 15px 5px #1c879c;
+    margin-top: 5%;
+    outline: 4px solid rgb(24, 160, 160);
+    font: bold 15px/1.5 "Lato", sans-serif;
+}
+
+.container__button {
+    width: 100%;
+    border: none;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container__button:hover {
+    background-color: rgb(6, 163, 163)
+}
+
+.container__button:active {
+    background-color: rgb(7, 248, 248);
+}
+
+.container--footnotes {
+    font: 10px/1.5 "Lato", sans-serif;
+    margin-top: 10%;
+    margin-bottom: -10%;
+}

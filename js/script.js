@@ -54,10 +54,10 @@
 
             const choice = choiceElement.value;
             const howMuch = howMuchElement.value;
-            let result = calculateResult(choice, howMuch)
-            let waluta = currencyResult(choice)
+            const result = calculateResult(choice, howMuch)
+            const waluta = currencyResult(choice)
             resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${waluta}`;
-            reset ();
+            reset();
         });
     }
 
@@ -68,5 +68,5 @@
         });
     }
 
-    init ();
+    init();
 }

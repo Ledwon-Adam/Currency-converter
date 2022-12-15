@@ -7,4 +7,6 @@ https://ledwon-adam.github.io/Currency-converter/
 A simple currency calculator that helps you convert zlotys to: euros, US dollars, British pounds and Swiss francs.  Operations can be performed in both directions and the result is shown to the second decimal place.
 
 Technologies used for the project;
-HTML, Java script, CSS.
+- HTML 
+- Java script
+- CSS

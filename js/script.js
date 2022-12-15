@@ -57,12 +57,16 @@
             let result = calculateResult(choice, howMuch)
             let waluta = currencyResult(choice)
             resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${waluta}`;
+            reset ();
         });
+    }
 
+    const reset = () => {
+        let resultElement = document.querySelector(".js-result");
         numberElement.addEventListener("reset", (_event) => {
             resultElement.innerText = "";
         });
     }
 
-    init();
+    init ();
 }

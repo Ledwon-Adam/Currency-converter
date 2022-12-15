@@ -47,24 +47,28 @@
 
         numberElement.addEventListener("submit", (event) => {
             event.preventDefault();
-
-            const howMuchElement = document.querySelector(".js-howMuch");
-            const choiceElement = document.querySelector(".js-choice");
-            let resultElement = document.querySelector(".js-result");
-
-            const choice = choiceElement.value;
-            const howMuch = howMuchElement.value;
-            const result = calculateResult(choice, howMuch)
-            const waluta = currencyResult(choice)
-            resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${waluta}`;
-            reset();
+        resultCalculation();
         });
     }
 
-    const reset = () => {
+    const resultCalculation = () => {
+        const howMuchElement = document.querySelector(".js-howMuch");
+        const choiceElement = document.querySelector(".js-choice");
         let resultElement = document.querySelector(".js-result");
+
+        const choice = choiceElement.value;
+        const howMuch = howMuchElement.value;
+        const result = calculateResult(choice, howMuch)
+        const waluta = currencyResult(choice)
+        resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${waluta}`;
+        reset();
+
+    }
+
+    const reset = () => {
+        let numberElement = document.querySelector(".js-recalculate");
         numberElement.addEventListener("reset", (_event) => {
-            resultElement.innerText = "";
+            resultElement.innerText("");
         });
     }
 

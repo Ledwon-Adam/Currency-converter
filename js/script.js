@@ -21,7 +21,7 @@
         }
     }
 
-    const currencyResult = (choice) => {
+    const setCurrency = (choice) => {
         switch (choice) {
             case "PLN/EUR":
                 return "EUR";
@@ -43,11 +43,11 @@
     }
 
     const init = () => {
-        const numberElement = document.querySelector(".js-recalculate");
+        let numberElement = document.querySelector(".js-form");
 
         numberElement.addEventListener("submit", (event) => {
             event.preventDefault();
-        resultCalculation();
+            resultCalculation();
         });
     }
 
@@ -59,18 +59,19 @@
         const choice = choiceElement.value;
         const howMuch = howMuchElement.value;
         const result = calculateResult(choice, howMuch)
-        const waluta = currencyResult(choice)
-        resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${waluta}`;
+        const currency = setCurrency(choice)
+        resultElement.innerText = `Po wymianie otrzymasz ${result.toFixed(2)} ${currency}`;
         reset();
-
     }
 
     const reset = () => {
-        let numberElement = document.querySelector(".js-recalculate");
-        numberElement.addEventListener("reset", (_event) => {
-            resultElement.innerText("");
+        const form = document.querySelector(".js-form");
+        let resultElement = document.querySelector(".js-result");
+    
+        form.addEventListener("reset", () => {
+          resultElement.innerText = "";
         });
-    }
+    };
 
     init();
 }

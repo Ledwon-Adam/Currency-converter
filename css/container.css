@@ -36,7 +36,7 @@ html {
     background-color: rgb(7, 248, 248);
 }
 
-.container--footnotes {
+.fieldset__text {
     font: 10px/1.5 "Lato", sans-serif;
     margin-top: 10%;
     margin-bottom: -10%;

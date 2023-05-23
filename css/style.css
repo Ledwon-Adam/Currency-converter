@@ -9,6 +9,6 @@ html {
 }
 
 .body {
-    background-image : url(../images/background.png);
+    font: bold 15px/1.5 "Lato", sans-serif;
 }
 
